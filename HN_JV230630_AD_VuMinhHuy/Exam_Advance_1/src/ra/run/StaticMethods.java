@@ -45,14 +45,14 @@ public class StaticMethods {
                 return (int)(o1.getExportPrice() - o2.getExportPrice());
             }
         });
-        System.out.println("Danh sách sản phẩm được sắp xếp theoo giá sản phẩm tăng dần : ");
-        Iterator var1 = products.iterator();
-
-        while(var1.hasNext()) {
-            Product p = (Product)var1.next();
-            p.displayData();
+        System.out.println("Danh sách sản phẩm được sắp xếp theo giá sản phẩm tăng dần : ");
+        if(products.isEmpty()){
+            System.out.println("Danh sách trống !");
+        }else {
+            for (Product p : products) {
+                p.displayData();
+            }
         }
-
         System.out.println();
     }
 
